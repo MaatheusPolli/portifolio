@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maatheuspolli.github.io/Site-portfolio/sitemap.xml

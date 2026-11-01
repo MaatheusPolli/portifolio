@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Matheus Polli | Desenvolvedor Full Stack, Integrações ERP e IA</title>
-  <meta name="description" content="Sou Matheus Polli, Software Engineer na Linx com mais de 11 anos de experiência. Trabalho com integrações ERP, NF-e e regras fiscais, Delphi, TypeScript, Python e inteligência artificial aplicada.">
-  <meta name="keywords" content="desenvolvedor full stack, integração ERP, NF-e, NFC-e, Delphi, TypeScript, Python, inteligência artificial, RAG, São José dos Campos">
+  <meta name="description" content="Sou Matheus Polli, engenheiro de software na Linx com mais de 11 anos de experiência. Trabalho com integrações ERP, NF-e e regras fiscais, Delphi, TypeScript, Node.js e inteligência artificial aplicada.">
+  <meta name="keywords" content="desenvolvedor full stack, engenheiro de software, integração ERP, integração com marketplace, VTEX, Mercado Livre, NF-e, CT-e, SPED, PIX, Delphi, TypeScript, Node.js, React, sistema para varejo, sistema para farmácia de manipulação, inteligência artificial, São José dos Campos">
   <meta name="author" content="Matheus Gasparotto Polli">
   <link rel="canonical" href="https://maatheuspolli.github.io/Site-portfolio/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="Matheus Polli | Desenvolvedor Full Stack">
   <meta property="og:description" content="Integrações ERP, documentos fiscais e IA aplicada. Veja meus projetos.">
   <meta property="og:url" content="https://maatheuspolli.github.io/Site-portfolio/">
@@ -21,15 +22,27 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Matheus Gasparotto Polli",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Engenheiro de Software",
     "worksFor": { "@type": "Organization", "name": "Linx" },
     "address": { "@type": "PostalAddress", "addressLocality": "São José dos Campos", "addressRegion": "SP", "addressCountry": "BR" },
     "url": "https://maatheuspolli.github.io/Site-portfolio/",
     "image": "https://avatars.githubusercontent.com/u/17732686?v=4",
     "email": "mailto:ma.polli@hotmail.com",
     "sameAs": ["https://www.linkedin.com/in/matheusgasparottopolli/", "https://github.com/MaatheusPolli"],
-    "knowsAbout": ["Delphi", "TypeScript", "Python", "Integração ERP", "NF-e", "Inteligência Artificial"]
+    "knowsAbout": ["Delphi", "TypeScript", "Node.js", "React", "Integração ERP", "Integração com marketplaces", "VTEX", "Mercado Livre", "NF-e", "CT-e", "MDF-e", "SPED", "PIX", "Sistemas para varejo", "Sistemas para farmácia de manipulação", "Inteligência Artificial", "RAG"],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidade do Sagrado Coração" },
+      { "@type": "CollegeOrUniversity", "name": "UniCesumar" }
+    ],
+    "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "Embarcadero Certified Delphi Developer" }
   }
+  </script>
+  <script>
+    // Aplica o tema salvo antes de pintar a página, para não piscar
+    try {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -38,84 +51,112 @@
 <body>
   <header class="nav">
     <a class="logo" href="#">mp<span>.</span></a>
-    <nav><a href="#sobre">Sobre</a><a href="#trajetoria">Trajetória</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav>
+    <nav>
+      <a href="#sobre" data-i18n="nav.about">Sobre</a>
+      <a href="#setores" data-i18n="nav.sectors">Setores</a>
+      <a href="#trajetoria" data-i18n="nav.career">Trajetória</a>
+      <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+      <a href="#contato" data-i18n="nav.contact">Contato</a>
+      <button id="lang-toggle" class="toggle" type="button" aria-label="Mudar idioma">EN</button>
+      <button id="theme-toggle" class="toggle" type="button" aria-label="Alternar tema claro e escuro">◐</button>
+    </nav>
   </header>
 
   <main>
     <section class="hero">
       <img class="avatar" src="https://avatars.githubusercontent.com/u/17732686?v=4" alt="Foto de Matheus Polli" width="120" height="120">
       <p class="kicker">Matheus Gasparotto Polli · São José dos Campos, SP</p>
-      <h1>Desenvolvedor Full Stack que faz o ERP conversar com o resto do mundo, <em>agora com IA no meio.</em></h1>
-      <p class="lead">São mais de 11 anos dentro de sistemas de gestão. Hoje sou Software Engineer na Linx, no time de P&amp;D, e cuido das integrações entre o ERP e plataformas como VTEX, Magento, Mercado Livre e Walmart. Já emiti nota fiscal, calculei frete, integrei PIX e modernizei muito código Delphi. Agora junto essa bagagem com TypeScript, Node.js e inteligência artificial.</p>
+      <h1 data-i18n="hero.title">Desenvolvedor Full Stack que faz o ERP conversar com o resto do mundo, <em>agora com IA no meio.</em></h1>
+      <p class="lead" data-i18n="hero.lead">São mais de 11 anos dentro de sistemas de gestão. Hoje sou engenheiro de software na Linx, no time de P&amp;D, e cuido das integrações entre o ERP e plataformas como VTEX, Magento, Mercado Livre e Walmart. Já emiti nota fiscal, calculei frete, integrei PIX e modernizei muito código Delphi. Agora junto essa bagagem com TypeScript, Node.js e inteligência artificial.</p>
       <div class="cta">
-        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn primary" href="#projetos" data-i18n="hero.cta">Ver projetos</a>
         <a class="btn" href="https://www.linkedin.com/in/matheusgasparottopolli/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/MaatheusPolli" target="_blank" rel="noopener">GitHub</a>
       </div>
       <ul class="stats">
-        <li><strong>11+ anos</strong><span>desenvolvendo sistemas ERP</span></li>
-        <li><strong>9 plataformas</strong><span>de e-commerce e marketplace integradas</span></li>
-        <li><strong>Delphi Certified</strong><span>certificação Embarcadero</span></li>
-        <li><strong id="stat-count">30+</strong><span>projetos públicos no GitHub</span></li>
+        <li><strong data-i18n="stats.years">11+ anos</strong><span data-i18n="stats.yearsTxt">desenvolvendo sistemas ERP</span></li>
+        <li><strong data-i18n="stats.platforms">9 plataformas</strong><span data-i18n="stats.platformsTxt">de e-commerce e marketplace integradas</span></li>
+        <li><strong data-i18n="stats.cert">Certificado Delphi</strong><span data-i18n="stats.certTxt">certificação oficial Embarcadero</span></li>
+        <li><strong id="stat-count">30+</strong><span data-i18n="stats.repos">projetos públicos no GitHub</span></li>
       </ul>
     </section>
 
     <section id="sobre">
-      <h2>Por que trabalhar comigo</h2>
+      <h2 data-i18n="about.title">Por que trabalhar comigo</h2>
       <div class="cards three">
-        <article><h3>Entendo o negócio</h3><p>NF-e, CT-e, MDF-e, SPED, frete, boleto e PIX fazem parte do meu dia a dia desde o começo da carreira. Você não precisa me explicar o que é CFOP. Eu transformo a regra em código com teste.</p></article>
-        <article><h3>Do Delphi ao TypeScript</h3><p>Trabalhei do Delphi 5 ao 10 Seattle e hoje escrevo Node.js e React. Sei modernizar um sistema crítico aos poucos, sem parar a operação de quem depende dele.</p></article>
-        <article><h3>IA com pé no chão</h3><p>Uso IA onde ela ajuda de fato. Meus assistentes citam a fonte ou dizem que não sabem, meus agentes não tomam decisão crítica sozinhos e tudo é medido antes de ir para produção.</p></article>
+        <article><h3 data-i18n="about.c1t">Entendo o negócio</h3><p data-i18n="about.c1">NF-e, CT-e, MDF-e, SPED, frete, boleto e PIX fazem parte do meu dia a dia desde o começo da carreira. Você não precisa me explicar o que é CFOP. Eu transformo a regra em código com teste.</p></article>
+        <article><h3 data-i18n="about.c2t">Do Delphi ao TypeScript</h3><p data-i18n="about.c2">Trabalhei do Delphi 5 ao 10 Seattle e hoje escrevo Node.js e React. Sei modernizar um sistema crítico aos poucos, sem parar a operação de quem depende dele.</p></article>
+        <article><h3 data-i18n="about.c3t">IA com pé no chão</h3><p data-i18n="about.c3">Uso IA onde ela ajuda de fato. Meus assistentes citam a fonte ou dizem que não sabem, meus agentes não tomam decisão crítica sozinhos e tudo é medido antes de ir para produção.</p></article>
       </div>
       <div class="stack">
-        <span>Delphi</span><span>TypeScript</span><span>JavaScript</span><span>Node.js</span><span>React</span><span>Python</span><span>PostgreSQL</span><span>SQL Server</span><span>MySQL</span><span>Firebird</span><span>REST, SOAP e GraphQL</span><span>Docker</span><span>AWS</span><span>GitLab CI/CD</span><span>ACBr</span><span>LLMs, RAG e agentes</span><span>Scrum e Kanban</span>
+        <span>Delphi</span><span>TypeScript</span><span>JavaScript</span><span>Node.js</span><span>React</span><span>Python</span><span>PostgreSQL</span><span>SQL Server</span><span>MySQL</span><span>Firebird</span><span>REST, SOAP, GraphQL</span><span>Docker</span><span>AWS</span><span>GitLab CI/CD</span><span>ACBr</span><span>LLMs, RAG</span><span>Scrum, Kanban</span>
+      </div>
+    </section>
+
+    <section id="setores">
+      <h2 data-i18n="sectors.title">Setores em que já atuei</h2>
+      <p class="muted" data-i18n="sectors.sub">Cada segmento tem suas regras. Já precisei entender todas elas para o sistema funcionar no dia a dia do cliente.</p>
+      <div class="cards three">
+        <article><h3 data-i18n="sectors.s1t">Varejo e e-commerce</h3><p data-i18n="sectors.s1">Lojas físicas, lojas virtuais e marketplaces conectados ao mesmo ERP: pedidos, estoque, preço, nota fiscal e entrega.</p></article>
+        <article><h3 data-i18n="sectors.s2t">Farmácias de manipulação</h3><p data-i18n="sectors.s2">Cálculo de fórmulas, controle de produção e rastreabilidade em um setor com regras sanitárias rígidas.</p></article>
+        <article><h3 data-i18n="sectors.s3t">Lojas de calçados e materiais de construção</h3><p data-i18n="sectors.s3">Grade de produtos, vendas no balcão, controle de estoque e emissão fiscal para o pequeno e médio varejo.</p></article>
+        <article><h3 data-i18n="sectors.s4t">Funerárias, cemitérios e clubes</h3><p data-i18n="sectors.s4">Gestão de contratos, mensalidades e serviços, com cobrança recorrente e atendimento próximo ao cliente.</p></article>
+      </div>
+
+      <h3 class="subtitle" data-i18n="integ.title">Integrações que já entreguei</h3>
+      <div class="integrations">
+        <div><h4 data-i18n="integ.g1">E-commerce e marketplaces</h4><p>VTEX, Magento, Mercado Livre, Walmart, Anymarket, Tray, Fbits, Jet, Rakuten</p></div>
+        <div><h4 data-i18n="integ.g2">Fiscal</h4><p>NF-e, NFC-e, CT-e, MDF-e, SPED, ACBr</p></div>
+        <div><h4 data-i18n="integ.g3">Logística</h4><p data-i18n="integ.g3t">Correios, transportadoras e cálculo de frete</p></div>
+        <div><h4 data-i18n="integ.g4">Pagamentos</h4><p data-i18n="integ.g4t">PIX, boletos e gateways de pagamento</p></div>
       </div>
     </section>
 
     <section id="trajetoria">
-      <h2>Minha trajetória</h2>
+      <h2 data-i18n="career.title">Minha trajetória</h2>
       <ol class="timeline">
-        <li><span class="when">2021 até hoje</span><h3>Software Engineer na Linx</h3><p>No time de P&amp;D da maior empresa de software para varejo da América Latina, desenvolvo as integrações entre o ERP e VTEX, Magento, Mercado Livre, Walmart, Anymarket, Tray e outras plataformas. Participo do ciclo inteiro, da análise ao deploy, e automatizei pipelines de CI/CD no GitLab para deixar as entregas mais rápidas e previsíveis.</p></li>
-        <li><span class="when">2019 a 2021</span><h3>Analista Programador na VSM Informática</h3><p>Trabalhei no ERP para farmácias de manipulação e evoluí o módulo de fórmulas, que automatiza cálculos da produção. Revisando a forma como os requisitos eram escritos, reduzimos o retrabalho nas entregas em cerca de 25%.</p></li>
-        <li><span class="when">2015 a 2019</span><h3>Desenvolvedor na Simbolus</h3><p>Comecei como estagiário e virei desenvolvedor. Fiz ERP para varejo, materiais de construção e funerárias em Delphi 7 e 10 Seattle, com integrações fiscais via ACBr (NF-e, CT-e, MDF-e e SPED) e com os Correios. No suporte, ajudei a reduzir em 20% o tempo médio de resposta aos clientes.</p></li>
+        <li><span class="when" data-i18n="career.j1d">2021 até hoje</span><h3 data-i18n="career.j1t">Engenheiro de Software na Linx</h3><p data-i18n="career.j1">No time de P&amp;D da maior empresa de software para varejo da América Latina, desenvolvo as integrações entre o ERP e VTEX, Magento, Mercado Livre, Walmart, Anymarket, Tray e outras plataformas. Participo do ciclo inteiro, da análise à publicação, e automatizei as esteiras de entrega no GitLab para deixar os lançamentos mais rápidos e previsíveis.</p></li>
+        <li><span class="when" data-i18n="career.j2d">2019 a 2021</span><h3 data-i18n="career.j2t">Analista Programador na VSM Informática</h3><p data-i18n="career.j2">Trabalhei no ERP para farmácias de manipulação e evoluí o módulo de fórmulas, que automatiza cálculos da produção. Revisando a forma como os requisitos eram escritos, reduzimos o retrabalho nas entregas em cerca de 25%.</p></li>
+        <li><span class="when" data-i18n="career.j3d">2015 a 2019</span><h3 data-i18n="career.j3t">Desenvolvedor na Simbolus</h3><p data-i18n="career.j3">Comecei como estagiário e virei desenvolvedor. Fiz ERP para varejo, materiais de construção e funerárias em Delphi 7 e 10 Seattle, com integrações fiscais via ACBr (NF-e, CT-e, MDF-e e SPED) e com os Correios. No suporte, ajudei a reduzir em 20% o tempo médio de resposta aos clientes.</p></li>
       </ol>
 
-      <h3 class="subtitle">Formação</h3>
+      <h3 class="subtitle" data-i18n="edu.title">Formação</h3>
       <div class="cards three">
-        <article><h3>Engenharia de IA Aplicada</h3><p>Pós-graduação na UNIPDS, de 2026 a 2027 (em andamento).</p></article>
-        <article><h3>Engenharia de Software</h3><p>Pós-graduação na Descomplica, de 2026 a 2027 (em andamento).</p></article>
-        <article><h3>Banco de Dados</h3><p>Especialização na UniCesumar, de 2019 a 2020.</p></article>
-        <article><h3>Ciência da Computação</h3><p>Graduação na Universidade do Sagrado Coração, de 2015 a 2018.</p></article>
-        <article><h3>Certificações</h3><p>Embarcadero Certified Delphi Developer, DevOps &amp; Agile Culture e trilha de Scrum.</p></article>
+        <article><h3 data-i18n="edu.e1t">Engenharia de IA Aplicada</h3><p data-i18n="edu.e1">Pós-graduação na UNIPDS, de 2026 a 2027 (em andamento).</p></article>
+        <article><h3 data-i18n="edu.e2t">Engenharia de Software</h3><p data-i18n="edu.e2">Pós-graduação na Descomplica, de 2026 a 2027 (em andamento).</p></article>
+        <article><h3 data-i18n="edu.e3t">Banco de Dados</h3><p data-i18n="edu.e3">Especialização na UniCesumar, de 2019 a 2020.</p></article>
+        <article><h3 data-i18n="edu.e4t">Ciência da Computação</h3><p data-i18n="edu.e4">Graduação na Universidade do Sagrado Coração, de 2015 a 2018.</p></article>
+        <article><h3 data-i18n="edu.e5t">Certificações</h3><p data-i18n="edu.e5">Desenvolvedor Delphi certificado pela Embarcadero, cultura DevOps e ágil e trilha de Scrum.</p></article>
       </div>
     </section>
 
     <section id="projetos">
-      <h2>Projetos</h2>
-      <p class="muted">Esta lista se atualiza sozinha com o que publico no GitHub.</p>
+      <h2 data-i18n="proj.title">Projetos</h2>
+      <p class="muted" data-i18n="proj.sub">Esta lista se atualiza sozinha com o que publico no GitHub.</p>
       <div class="filters" role="tablist">
-        <button class="on" data-cat="all">Todos</button>
-        <button data-cat="ia">IA</button>
-        <button data-cat="fiscal">Fiscal e ERP</button>
-        <button data-cat="integracoes">Integrações e APIs</button>
-        <button data-cat="estudos">Estudos</button>
-        <button data-cat="outros">Outros</button>
+        <button class="on" data-cat="all" data-i18n="cat.all">Todos</button>
+        <button data-cat="ia" data-i18n="cat.ia">IA</button>
+        <button data-cat="fiscal" data-i18n="cat.fiscal">Fiscal e ERP</button>
+        <button data-cat="integracoes" data-i18n="cat.integracoes">Integrações e APIs</button>
+        <button data-cat="estudos" data-i18n="cat.estudos">Estudos</button>
+        <button data-cat="outros" data-i18n="cat.outros">Outros</button>
       </div>
       <div id="grid" class="cards grid"><p class="muted">Carregando projetos...</p></div>
     </section>
 
     <section id="contato" class="contact">
-      <h2>Vamos conversar?</h2>
-      <p>Tem uma integração complicada, uma regra fiscal chata ou uma ideia com IA que precisa sair do papel? Me chama.</p>
+      <h2 data-i18n="contact.title">Vamos conversar?</h2>
+      <p data-i18n="contact.text">Tem uma integração complicada, uma regra fiscal chata ou uma ideia com IA que precisa sair do papel? Me chama.</p>
       <div class="cta">
-        <a class="btn primary" href="https://www.linkedin.com/in/matheusgasparottopolli/" target="_blank" rel="noopener">Falar no LinkedIn</a>
+        <a class="btn primary" href="https://www.linkedin.com/in/matheusgasparottopolli/" target="_blank" rel="noopener" data-i18n="contact.linkedin">Falar no LinkedIn</a>
         <a class="btn" href="mailto:ma.polli@hotmail.com">ma.polli@hotmail.com</a>
-        <a class="btn" href="https://github.com/MaatheusPolli" target="_blank" rel="noopener">Ver GitHub</a>
+        <a class="btn" href="https://github.com/MaatheusPolli" target="_blank" rel="noopener" data-i18n="contact.github">Ver GitHub</a>
       </div>
     </section>
   </main>
 
   <footer>© <span id="year"></span> Matheus Polli</footer>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

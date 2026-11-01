@@ -2,11 +2,13 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const grid = document.getElementById("grid");
 let projects = [];
+let currentCat = "all";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const pretty = (n) => n.replace(/[-_]/g, " ");
 
-function render(cat) {
+function render(cat = currentCat) {
+  currentCat = cat;
   const list = cat === "all" ? projects : projects.filter((p) => p.category === cat);
   grid.innerHTML = list.length
     ? list.map((p) => `
@@ -16,10 +18,10 @@ function render(cat) {
         <div class="meta">
           ${p.language ? `<span class="tag">${esc(p.language)}</span>` : ""}
           ${p.stars ? `<span>★ ${p.stars}</span>` : ""}
-          ${p.homepage ? `<a class="demo" href="${esc(p.homepage)}" target="_blank" rel="noopener">Ver demo</a>` : ""}
+          ${p.homepage ? `<a class="demo" href="${esc(p.homepage)}" target="_blank" rel="noopener">${t("js.demo")}</a>` : ""}
         </div>
       </article>`).join("")
-    : `<p class="muted">Nenhum projeto nesta categoria ainda.</p>`;
+    : `<p class="muted">${t("js.empty")}</p>`;
 }
 
 document.querySelectorAll(".filters button").forEach((b) =>
@@ -37,4 +39,6 @@ fetch("projects.json", { cache: "no-store" })
     document.getElementById("stat-count").textContent = projects.length;
     render("all");
   })
-  .catch(() => { grid.innerHTML = `<p class="muted">Não foi possível carregar. Veja no <a href="https://github.com/MaatheusPolli">GitHub</a>.</p>`; });
+  .catch(() => { grid.innerHTML = `<p class="muted">${t("js.error")} <a href="https://github.com/MaatheusPolli">GitHub</a>.</p>`; });
+
+document.addEventListener("langchange", () => projects.length && render());
