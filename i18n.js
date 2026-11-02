@@ -66,6 +66,8 @@ const I18N = {
     "pro.p1t": "Gerenciador Caixa",
     "pro.p1": "Web app that replaced Excel spreadsheets for managing car inventory and sales, loans with automatic interest and personal assets, with dashboard, reports, e-mail and WhatsApp alerts and encrypted backups. Private code.",
     "proj.gh": "Open source on GitHub",
+    "pro.p2t": "M2 Motors website",
+    "pro.p2": "Used car and motorcycle catalog for a dealership in Bauru (Brazil), with filters, Google-optimized vehicle pages, direct WhatsApp contact and an admin panel where the store manages inventory and photos. Private code.",
     "proj.sub": "This list updates itself with what I publish on GitHub. Descriptions are in Portuguese.",
     "cat.all": "All",
     "cat.ia": "AI",
