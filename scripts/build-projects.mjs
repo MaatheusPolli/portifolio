@@ -1,9 +1,11 @@
 // Gera projects.json a partir dos repositórios PÚBLICOS do GitHub.
 // Regras: ignora forks, arquivados, o repo de perfil, repos sem descrição
-// e qualquer repo com a topic "no-portfolio". Topic "destaque" fixa no topo.
+// e qualquer repo com a topic "no-portfolio" (ou em EXCLUDE). Topic "destaque" (ou FEATURED) fixa no topo.
 import { writeFile } from "node:fs/promises";
 
 const USER = process.env.GH_USER || "MaatheusPolli";
+const FEATURED = ["delphi-twin", "fiscal-mind", "order-agent", "mcp-brasil"];
+const EXCLUDE = ["portifolio"];
 const headers = { "User-Agent": "portfolio-build", Accept: "application/vnd.github+json" };
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 
@@ -24,7 +26,7 @@ const category = (r) => {
 
 const projects = repos
   .filter((r) => !r.private && !r.fork && !r.archived && r.name !== USER && r.description)
-  .filter((r) => !(r.topics || []).includes("no-portfolio"))
+  .filter((r) => !EXCLUDE.includes(r.name) && !(r.topics || []).includes("no-portfolio"))
   .map((r) => ({
     name: r.name,
     description: r.description,
@@ -33,7 +35,7 @@ const projects = repos
     language: r.language,
     stars: r.stargazers_count,
     topics: r.topics || [],
-    featured: (r.topics || []).includes("destaque"),
+    featured: FEATURED.includes(r.name) || (r.topics || []).includes("destaque"),
     category: category(r),
     pushed_at: r.pushed_at,
   }))
