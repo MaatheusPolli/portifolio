@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T16:30:58.959Z",
+  "generated_at": "2026-11-02T16:42:34.064Z",
   "projects": [
     {
       "name": "order-agent",
@@ -101,7 +101,7 @@
     },
     {
       "name": "interviewcoach",
-      "description": "O interviewCoach é uma ferramenta de preparação para processos seletivos técnicos que funciona de forma 100% offlinesem que seus dados saiam do seu computador.",
+      "description": "O interviewCoach é uma ferramenta de preparação para processos seletivos técnicos que funciona de forma 100% offline sem que seus dados saiam do seu computador.",
       "description_en": "Preparation tool for technical job interviews that runs 100% offline, without your data ever leaving your computer.",
       "url": "https://github.com/MaatheusPolli/interviewcoach",
       "homepage": null,
@@ -395,7 +395,7 @@
     },
     {
       "name": "Delphi_Thread",
-      "description": "Persistência em Delphi com RTTI e custom attributes, eliminando o SQL repetido das telas de cadastro. Projeto de estudo.",
+      "description": "Exemplo de TThread em Delphi VCL: uma tarefa paralela atualiza a TProgressBar sem travar a tela. Projeto de estudo.",
       "description_en": "TThread example in Delphi VCL: a background task updates a TProgressBar without freezing the screen. Study project.",
       "url": "https://github.com/MaatheusPolli/Delphi_Thread",
       "homepage": null,
@@ -409,7 +409,7 @@
     },
     {
       "name": "Delphi_RTTI",
-      "description": "Exemplo de TThread em Delphi VCL: uma tarefa paralela atualiza a TProgressBar sem travar a tela. Projeto de estudo.",
+      "description": "Persistência em Delphi com RTTI e custom attributes, eliminando o SQL repetido das telas de cadastro. Projeto de estudo.",
       "description_en": "Persistence in Delphi with RTTI and custom attributes, removing repeated SQL from data entry screens. Study project.",
       "url": "https://github.com/MaatheusPolli/Delphi_RTTI",
       "homepage": null,
