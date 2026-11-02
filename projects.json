@@ -1,21 +1,75 @@
 {
-  "generated_at": "2026-11-01T18:10:36.997Z",
+  "generated_at": "2026-11-02T16:29:44.188Z",
   "projects": [
     {
       "name": "order-agent",
       "description": "Agente de pós-venda com Claude e tool use. Consulta pedidos e rastreio, mas não cancela sozinho: quem decide é o servidor.",
+      "description_en": "After-sales agent with Claude and tool use. It looks up orders and tracking, but never cancels on its own: the server makes the decision.",
       "url": "https://github.com/MaatheusPolli/order-agent",
       "homepage": null,
       "language": "TypeScript",
       "stars": 0,
       "topics": [],
-      "featured": false,
+      "featured": true,
       "category": "ia",
       "pushed_at": "2026-11-01T18:07:10Z"
     },
     {
+      "name": "fiscal-mind",
+      "description": "Assistente RAG sobre a documentação da NF-e que sempre cita a fonte ou recusa quando não encontra. Informativo, não é consultoria fiscal.",
+      "description_en": "RAG assistant over the Brazilian NF-e documentation that always cites the source or declines when it finds nothing. Informational, not tax advice.",
+      "url": "https://github.com/MaatheusPolli/fiscal-mind",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "topics": [],
+      "featured": true,
+      "category": "ia",
+      "pushed_at": "2026-10-30T20:38:41Z"
+    },
+    {
+      "name": "mcp-brasil",
+      "description": "Servidor MCP em TypeScript que expõe dados públicos brasileiros (CEP, CNPJ, CPF, bancos, feriados) para LLMs.",
+      "description_en": "TypeScript MCP server that exposes Brazilian public data (postal codes, CNPJ, CPF, banks, holidays) to LLMs.",
+      "url": "https://github.com/MaatheusPolli/mcp-brasil",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "topics": [],
+      "featured": true,
+      "category": "ia",
+      "pushed_at": "2026-10-20T19:12:12Z"
+    },
+    {
+      "name": "delphi-twin",
+      "description": "Migração de um motor tributário (ICMS, ICMS-ST, IPI, PIS/COFINS, DIFAL) de Delphi para TypeScript, com a mesma suíte de testes.",
+      "description_en": "Migration of a Brazilian tax engine (ICMS, ICMS-ST, IPI, PIS/COFINS, DIFAL) from Delphi to TypeScript, keeping the same test suite.",
+      "url": "https://github.com/MaatheusPolli/delphi-twin",
+      "homepage": null,
+      "language": "Pascal",
+      "stars": 0,
+      "topics": [],
+      "featured": true,
+      "category": "fiscal",
+      "pushed_at": "2026-10-20T19:11:45Z"
+    },
+    {
+      "name": "pascal-brasil",
+      "description": "Biblioteca Delphi/Free Pascal com utilitários brasileiros: validação de CPF, CNPJ alfanumérico e IE das 27 UFs, máscaras, PIX copia e cola e consulta de CEP e CNPJ. Sem dependências e com testes automatizados.",
+      "description_en": "Delphi/Free Pascal library with Brazilian utilities: CPF, alphanumeric CNPJ and state registration validation, masks, PIX copy-and-paste and postal code and CNPJ lookup. No dependencies, with automated tests.",
+      "url": "https://github.com/MaatheusPolli/pascal-brasil",
+      "homepage": null,
+      "language": null,
+      "stars": 0,
+      "topics": [],
+      "featured": false,
+      "category": "fiscal",
+      "pushed_at": "2026-11-02T14:11:39Z"
+    },
+    {
       "name": "log-sherlock",
       "description": "Diagnóstico de logs de integração ERP ↔ e-commerce com RAG: agrupa erros e sugere a correção citando a fonte. Em desenvolvimento.",
+      "description_en": "RAG-based diagnosis of ERP ↔ e-commerce integration logs: groups errors and suggests fixes citing the source. Work in progress.",
       "url": "https://github.com/MaatheusPolli/log-sherlock",
       "homepage": null,
       "language": "TypeScript",
@@ -28,6 +82,7 @@
     {
       "name": "gitHooks",
       "description": "Hooks do Git que geram mensagens de commit com IA (Gemini, Claude ou Copilot) e revisam código.",
+      "description_en": "Git hooks that write commit messages with AI (Gemini, Claude or Copilot) and review code.",
       "url": "https://github.com/MaatheusPolli/gitHooks",
       "homepage": null,
       "language": "PowerShell",
@@ -38,20 +93,9 @@
       "pushed_at": "2026-11-01T17:31:19Z"
     },
     {
-      "name": "fiscal-mind",
-      "description": "Assistente RAG sobre a documentação da NF-e que sempre cita a fonte ou recusa quando não encontra. Informativo, não é consultoria fiscal.",
-      "url": "https://github.com/MaatheusPolli/fiscal-mind",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "topics": [],
-      "featured": false,
-      "category": "ia",
-      "pushed_at": "2026-10-30T20:38:41Z"
-    },
-    {
       "name": "interviewcoach",
       "description": "O interviewCoach é uma ferramenta de preparação para processos seletivos técnicos que funciona de forma 100% offlinesem que seus dados saiam do seu computador.",
+      "description_en": "Preparation tool for technical job interviews that runs 100% offline, without your data ever leaving your computer.",
       "url": "https://github.com/MaatheusPolli/interviewcoach",
       "homepage": null,
       "language": "JavaScript",
@@ -64,6 +108,7 @@
     {
       "name": "doc-guard",
       "description": "Validação, formatação e geração de CPF, CNPJ (inclusive alfanumérico de 2026) e Inscrição Estadual das 27 UFs em TypeScript.",
+      "description_en": "Validation, formatting and generation of Brazilian CPF, CNPJ (including the 2026 alphanumeric format) and state registration numbers for all 27 states, in TypeScript.",
       "url": "https://github.com/MaatheusPolli/doc-guard",
       "homepage": null,
       "language": "TypeScript",
@@ -76,6 +121,7 @@
     {
       "name": "brasil-kit",
       "description": "SDK TypeScript para APIs públicas brasileiras (ViaCEP, BrasilAPI, IBGE), com cache, retry e fallback entre provedores.",
+      "description_en": "TypeScript SDK for Brazilian public APIs (ViaCEP, BrasilAPI, IBGE), with caching, retries and fallback between providers.",
       "url": "https://github.com/MaatheusPolli/brasil-kit",
       "homepage": null,
       "language": "TypeScript",
@@ -88,6 +134,7 @@
     {
       "name": "frete-wise",
       "description": "API de cotação de frete multi-transportadora, com consultas em paralelo, timeout, circuit breaker e regras de peso cubado.",
+      "description_en": "Multi-carrier shipping quote API with parallel requests, timeouts, circuit breaker and dimensional weight rules.",
       "url": "https://github.com/MaatheusPolli/frete-wise",
       "homepage": null,
       "language": "TypeScript",
@@ -100,6 +147,7 @@
     {
       "name": "tensorflowjs-running-recommender",
       "description": "Projeto acadêmico desenvolvido durante a pós-graduação em Engenharia de Software com IA Aplicada. Uma rede neural simples, treinada no browser via TensorFlow.js, que recomenda a intensidade ideal de um treino de corrida com base nos dados do corredor.",
+      "description_en": "Academic project from my postgraduate program. A simple neural network trained in the browser with TensorFlow.js that recommends the ideal intensity for a running workout based on the runner's data.",
       "url": "https://github.com/MaatheusPolli/tensorflowjs-running-recommender",
       "homepage": null,
       "language": "JavaScript",
@@ -110,8 +158,35 @@
       "pushed_at": "2026-10-20T19:12:49Z"
     },
     {
+      "name": "sheet-cat",
+      "description": "CLI que converte planilhas de produtos (CSV/XLSX) em catálogo pronto para e-commerce (VTEX e outros), com validação linha a linha de EAN, SKU e preço e relatório de erros antes da importação.",
+      "description_en": "CLI that turns product spreadsheets (CSV/XLSX) into an e-commerce-ready catalog (VTEX and others), with row-by-row validation of EAN, SKU and price and an error report before import.",
+      "url": "https://github.com/MaatheusPolli/sheet-cat",
+      "homepage": null,
+      "language": null,
+      "stars": 0,
+      "topics": [],
+      "featured": false,
+      "category": "outros",
+      "pushed_at": "2026-10-20T19:12:46Z"
+    },
+    {
+      "name": "semantic-shelf",
+      "description": "Busca híbrida para catálogo de e-commerce: vetorial e full-text com fusão RRF, entendimento de consultas em português e rerank opcional com LLM. A qualidade é medida com NDCG e MRR contra uma busca tradicional.",
+      "description_en": "Hybrid search for e-commerce catalogs: vector and full-text with RRF fusion, Portuguese query understanding and optional LLM rerank, measured with NDCG and MRR against traditional search.",
+      "url": "https://github.com/MaatheusPolli/semantic-shelf",
+      "homepage": null,
+      "language": null,
+      "stars": 0,
+      "topics": [],
+      "featured": false,
+      "category": "ia",
+      "pushed_at": "2026-10-20T19:12:44Z"
+    },
+    {
       "name": "promptlab",
       "description": "PromptLab é uma bancada de trabalho offline para engenharia de prompt construída sobre a IA integrada do Chrome (Gemini Nano)",
+      "description_en": "Offline prompt engineering workbench built on Chrome's built-in AI (Gemini Nano).",
       "url": "https://github.com/MaatheusPolli/promptlab",
       "homepage": null,
       "language": "JavaScript",
@@ -122,8 +197,22 @@
       "pushed_at": "2026-10-20T19:12:41Z"
     },
     {
+      "name": "pixel-pix",
+      "description": "Gerador e decodificador de PIX copia e cola (BR Code/EMV) em TypeScript, com CRC16, validação de CPF e CNPJ e interface React que gera o QR Code no navegador. Monorepo com cobertura de testes acima de 96%.",
+      "description_en": "Generator and decoder for Brazilian PIX copy-and-paste payloads (BR Code/EMV) in TypeScript, with CRC16, CPF/CNPJ validation and a React UI that renders the QR code in the browser.",
+      "url": "https://github.com/MaatheusPolli/pixel-pix",
+      "homepage": null,
+      "language": null,
+      "stars": 0,
+      "topics": [],
+      "featured": false,
+      "category": "fiscal",
+      "pushed_at": "2026-10-20T19:12:39Z"
+    },
+    {
       "name": "pagewhisperer",
       "description": "PageWhisperer é uma extensão para Google Chrome (Manifest V3) que injeta um painel lateral inteligente em qualquer página da web. Utilizando o Gemini Nano (IA nativa do Chrome), a ferramenta oferece resumos estruturados, extração de pontos-chave e uma interface de Q&A (perguntas e respostas) — tudo processado 100% localmente e offline.",
+      "description_en": "Chrome extension (Manifest V3) that adds a smart side panel to any web page. Using Gemini Nano, it provides structured summaries, key points and Q&A, all processed 100% locally and offline.",
       "url": "https://github.com/MaatheusPolli/pagewhisperer",
       "homepage": null,
       "language": "JavaScript",
@@ -134,8 +223,22 @@
       "pushed_at": "2026-10-20T19:12:31Z"
     },
     {
+      "name": "order-pulse",
+      "description": "Painel unificado de pedidos VTEX, Mercado Livre, Magento e Tray, com status normalizado, KPIs, filtros na URL e tela de falhas de integração com o ERP com reprocessamento. React, tabela virtualizada e testes E2E.",
+      "description_en": "Unified order dashboard for VTEX, Mercado Livre, Magento and Tray, with normalized statuses, KPIs, URL-based filters and an ERP integration failures screen with reprocessing. React, virtualized table and E2E tests.",
+      "url": "https://github.com/MaatheusPolli/order-pulse",
+      "homepage": null,
+      "language": null,
+      "stars": 0,
+      "topics": [],
+      "featured": false,
+      "category": "fiscal",
+      "pushed_at": "2026-10-20T19:12:27Z"
+    },
+    {
       "name": "nota-vision",
       "description": "Extrai dados de cupons fiscais, NF-e e recibos a partir de foto ou PDF, com JSON validado e confiança por campo.",
+      "description_en": "Extracts data from Brazilian receipts, NF-e invoices and other receipts from a photo or PDF, with validated JSON and per-field confidence.",
       "url": "https://github.com/MaatheusPolli/nota-vision",
       "homepage": null,
       "language": null,
@@ -148,6 +251,7 @@
     {
       "name": "nfe-lens",
       "description": "Parser e visualizador de NF-e (modelo 55) e NFC-e (modelo 65) em TypeScript.",
+      "description_en": "Parser and viewer for Brazilian NF-e (model 55) and NFC-e (model 65) invoices in TypeScript.",
       "url": "https://github.com/MaatheusPolli/nfe-lens",
       "homepage": null,
       "language": null,
@@ -160,6 +264,7 @@
     {
       "name": "ncm-finder",
       "description": "Classificador de produtos por NCM (Mercosul) com busca semântica e avaliação por top-1, top-5 e MRR.",
+      "description_en": "Product classifier for NCM (Mercosur tariff codes) with semantic search, evaluated by top-1, top-5 and MRR.",
       "url": "https://github.com/MaatheusPolli/ncm-finder",
       "homepage": null,
       "language": "TypeScript",
@@ -172,6 +277,7 @@
     {
       "name": "movie-recommender",
       "description": "Recomendação de filmes full-stack: rede neural com TensorFlow.js treinando no navegador e SQLite no backend.",
+      "description_en": "Full-stack movie recommender: a TensorFlow.js neural network trained in the browser with a SQLite backend.",
       "url": "https://github.com/MaatheusPolli/movie-recommender",
       "homepage": null,
       "language": "JavaScript",
@@ -182,20 +288,9 @@
       "pushed_at": "2026-10-20T19:12:15Z"
     },
     {
-      "name": "mcp-brasil",
-      "description": "Servidor MCP em TypeScript que expõe dados públicos brasileiros (CEP, CNPJ, CPF, bancos, feriados) para LLMs.",
-      "url": "https://github.com/MaatheusPolli/mcp-brasil",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "topics": [],
-      "featured": false,
-      "category": "ia",
-      "pushed_at": "2026-10-20T19:12:12Z"
-    },
-    {
       "name": "horse-bridge",
       "description": "API REST em Delphi (Horse) com JWT, OpenAPI e testes de integração, consumida por um front em React e TypeScript.",
+      "description_en": "REST API in Delphi (Horse) with JWT, OpenAPI and integration tests, consumed by a React and TypeScript front end.",
       "url": "https://github.com/MaatheusPolli/horse-bridge",
       "homepage": null,
       "language": "Pascal",
@@ -208,6 +303,7 @@
     {
       "name": "hook-yard",
       "description": "Receptor de webhooks com fila, retry exponencial, dead-letter queue e painel de observabilidade.",
+      "description_en": "Webhook receiver with a queue, exponential retry, dead-letter queue and an observability dashboard.",
       "url": "https://github.com/MaatheusPolli/hook-yard",
       "homepage": null,
       "language": "TypeScript",
@@ -218,20 +314,9 @@
       "pushed_at": "2026-10-20T19:12:00Z"
     },
     {
-      "name": "delphi-twin",
-      "description": "Migração de um motor tributário (ICMS, ICMS-ST, IPI, PIS/COFINS, DIFAL) de Delphi para TypeScript, com a mesma suíte de testes.",
-      "url": "https://github.com/MaatheusPolli/delphi-twin",
-      "homepage": null,
-      "language": "Pascal",
-      "stars": 0,
-      "topics": [],
-      "featured": false,
-      "category": "fiscal",
-      "pushed_at": "2026-10-20T19:11:45Z"
-    },
-    {
       "name": "danfe-print",
       "description": "Gera DANFE (NF-e 55 e NFC-e 65) em PDF a partir do XML autorizado, com app VCL e linha de comando.",
+      "description_en": "Generates the DANFE PDF (NF-e 55 and NFC-e 65) from the authorized XML, with a VCL app and a command-line tool.",
       "url": "https://github.com/MaatheusPolli/danfe-print",
       "homepage": null,
       "language": "Pascal",
@@ -244,6 +329,7 @@
     {
       "name": "copy-seller",
       "description": "Gerador de títulos e descrições para marketplaces com Claude, com regras por canal e avaliação LLM-as-judge.",
+      "description_en": "Marketplace title and description generator with Claude, with per-channel rules and LLM-as-judge evaluation.",
       "url": "https://github.com/MaatheusPolli/copy-seller",
       "homepage": null,
       "language": "HTML",
@@ -256,6 +342,7 @@
     {
       "name": "codereview-ai",
       "description": "Revisor de código offline usando o Gemini Nano do Chrome (Prompt API). Prova de conceito.",
+      "description_en": "Offline code reviewer using Chrome's Gemini Nano (Prompt API). Proof of concept.",
       "url": "https://github.com/MaatheusPolli/codereview-ai",
       "homepage": null,
       "language": "JavaScript",
@@ -268,6 +355,7 @@
     {
       "name": "Estudos-JavaScript",
       "description": "Sete mini-projetos em JavaScript puro, um por dia, com galeria para abrir no navegador. Projeto de estudo.",
+      "description_en": "Seven mini-projects in plain JavaScript, one per day, with a gallery to open in the browser. Study project.",
       "url": "https://github.com/MaatheusPolli/Estudos-JavaScript",
       "homepage": "https://estudos-java-script-eta.vercel.app",
       "language": "JavaScript",
@@ -280,6 +368,7 @@
     {
       "name": "Delphi_Thread",
       "description": "Persistência em Delphi com RTTI e custom attributes, eliminando o SQL repetido das telas de cadastro. Projeto de estudo.",
+      "description_en": "TThread example in Delphi VCL: a background task updates a TProgressBar without freezing the screen. Study project.",
       "url": "https://github.com/MaatheusPolli/Delphi_Thread",
       "homepage": null,
       "language": "Pascal",
@@ -292,6 +381,7 @@
     {
       "name": "Delphi_RTTI",
       "description": "Exemplo de TThread em Delphi VCL: uma tarefa paralela atualiza a TProgressBar sem travar a tela. Projeto de estudo.",
+      "description_en": "Persistence in Delphi with RTTI and custom attributes, removing repeated SQL from data entry screens. Study project.",
       "url": "https://github.com/MaatheusPolli/Delphi_RTTI",
       "homepage": null,
       "language": "Pascal",
@@ -304,6 +394,7 @@
     {
       "name": "Cursodevmedia",
       "description": "Dois exercícios de HTML, CSS e JavaScript feitos no curso da DevMedia. Projeto de estudo.",
+      "description_en": "Two HTML, CSS and JavaScript exercises from a DevMedia course. Study project.",
       "url": "https://github.com/MaatheusPolli/Cursodevmedia",
       "homepage": null,
       "language": "HTML",
@@ -316,6 +407,7 @@
     {
       "name": "Bikecraft",
       "description": "Site institucional de bicicletas personalizadas (marca fictícia), feito em HTML, CSS e JavaScript puro. Projeto de estudo.",
+      "description_en": "Website for a custom bicycle brand (fictional), built with plain HTML, CSS and JavaScript. Study project.",
       "url": "https://github.com/MaatheusPolli/Bikecraft",
       "homepage": "https://bikecraft-phi.vercel.app",
       "language": "PHP",

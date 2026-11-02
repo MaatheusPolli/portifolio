@@ -1,11 +1,13 @@
 // Gera projects.json a partir dos repositórios PÚBLICOS do GitHub.
 // Regras: ignora forks, arquivados, o repo de perfil, repos sem descrição
 // e qualquer repo com a topic "no-portfolio" (ou em EXCLUDE). Topic "destaque" (ou FEATURED) fixa no topo.
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const USER = process.env.GH_USER || "MaatheusPolli";
 const FEATURED = ["delphi-twin", "fiscal-mind", "order-agent", "mcp-brasil"];
 const EXCLUDE = ["portifolio"];
+// Descrições em inglês, mantidas à mão; repo sem tradução mostra a descrição em português
+const EN = JSON.parse(await readFile("descriptions-en.json", "utf8"));
 const headers = { "User-Agent": "portfolio-build", Accept: "application/vnd.github+json" };
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 
@@ -30,6 +32,7 @@ const projects = repos
   .map((r) => ({
     name: r.name,
     description: r.description,
+    description_en: EN[r.name] || null,
     url: r.html_url,
     homepage: r.homepage || null,
     language: r.language,

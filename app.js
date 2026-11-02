@@ -14,7 +14,7 @@ function render(cat = currentCat) {
     ? list.map((p) => `
       <article class="project${p.featured ? " featured" : ""}">
         <h3><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(pretty(p.name))}</a></h3>
-        <p>${esc(p.description)}</p>
+        <p>${esc((lang === "en" && p.description_en) || p.description)}</p>
         <div class="meta">
           ${p.language ? `<span class="tag">${esc(p.language)}</span>` : ""}
           ${p.stars ? `<span>★ ${p.stars}</span>` : ""}
