@@ -18,6 +18,7 @@ function render(cat = currentCat) {
         <div class="meta">
           ${p.language ? `<span class="tag">${esc(p.language)}</span>` : ""}
           ${p.stars ? `<span>★ ${p.stars}</span>` : ""}
+          ${p.npm ? `<a class="demo" href="${esc(p.npm)}" target="_blank" rel="noopener">npm</a>` : ""}
           ${p.homepage ? `<a class="demo" href="${esc(p.homepage)}" target="_blank" rel="noopener">${t("js.demo")}</a>` : ""}
         </div>
       </article>`).join("")

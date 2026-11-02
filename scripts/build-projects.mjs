@@ -6,6 +6,8 @@ import { readFile, writeFile } from "node:fs/promises";
 const USER = process.env.GH_USER || "MaatheusPolli";
 const FEATURED = ["delphi-twin", "fiscal-mind", "order-agent", "mcp-brasil"];
 const EXCLUDE = ["portifolio"];
+// Repos publicados no npm (repo -> pacote)
+const NPM = { "doc-guard": "@matheuspolli/doc-guard", "brasil-kit": "brasil-sdk" };
 // Descrições em inglês, mantidas à mão; repo sem tradução mostra a descrição em português
 const EN = JSON.parse(await readFile("descriptions-en.json", "utf8"));
 const headers = { "User-Agent": "portfolio-build", Accept: "application/vnd.github+json" };
@@ -35,6 +37,7 @@ const projects = repos
     description_en: EN[r.name] || null,
     url: r.html_url,
     homepage: r.homepage || null,
+    npm: NPM[r.name] ? `https://www.npmjs.com/package/${NPM[r.name]}` : null,
     language: r.language,
     stars: r.stargazers_count,
     topics: r.topics || [],
